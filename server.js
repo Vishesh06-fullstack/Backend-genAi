@@ -12,6 +12,7 @@ app.use(express.json());
 const ai = new GoogleGenAI({
   apiKey: process.env.GEMINI_API_KEY,
 });
+const PORT = process.env.PORT || 5000;
 
 app.post("/generate", async (req, res) => {
   try {
